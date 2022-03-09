@@ -28,8 +28,8 @@ public class TesteLeitura2 {
             Double valor5 = linhaScanner.nextDouble();
 
 
-            String.format("%s %s %s %s %s",valor1,valor2,valor3,valor4,valor5);
-            System.out.println(valor1 + valor2 + valor3 + valor4 + valor5);
+            String valorFormatado = String.format("%s %s %s %s %s",valor1,valor2,valor3,valor4,valor5);
+            System.out.println(valorFormatado);
 
             linhaScanner.close();
 
