@@ -8,7 +8,7 @@ public class TesteLeitura {
          //fluxo de entrada com arquivos
 
         FileInputStream fis = new FileInputStream("iojava.txt");
-        InputStreamReader isr = new InputStreamReader(fis);
+        InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
         BufferedReader br = new BufferedReader(isr);
 
         String linha = br.readLine();

@@ -5,11 +5,11 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class TesteLeitura2 {
+public class TesteScanner {
 
     public static void main (String[] args) throws Exception {
 
-        Scanner scanner = new Scanner( new File("contas.csv"));
+        Scanner scanner = new Scanner( new File("contas.csv"), "UTF-8");
 
 
         while(scanner.hasNextLine()) {
@@ -21,14 +21,14 @@ public class TesteLeitura2 {
 
             linhaScanner.useLocale(Locale.US);
             linhaScanner.useDelimiter(",");
-            String valor1 = linhaScanner.next();
-            int valor2 = linhaScanner.nextInt();
-            int valor3 = linhaScanner.nextInt();
-            String valor4 = linhaScanner.next();
-            Double valor5 = linhaScanner.nextDouble();
+            String tipoConta = linhaScanner.next();
+            int agencia = linhaScanner.nextInt();
+            int numero = linhaScanner.nextInt();
+            String titular = linhaScanner.next();
+            Double saldo = linhaScanner.nextDouble();
 
 
-            String valorFormatado = String.format("%s %s %s %s %s",valor1,valor2,valor3,valor4,valor5);
+            String valorFormatado = String.format(new Locale("pt","br"),"%s - %04d-%04d, %20s:  %10.2f",tipoConta,agencia,numero,titular,saldo);
             System.out.println(valorFormatado);
 
             linhaScanner.close();
