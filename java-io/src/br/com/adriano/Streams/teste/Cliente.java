@@ -1,5 +1,6 @@
 package br.com.adriano.Streams.teste;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -10,6 +11,9 @@ import java.io.Serializable;
  */
 
 public class Cliente implements Serializable{
+
+	@Serial
+	private static final long serialVersionUID = 835513407584203822L;
 
 	private String nome;
 	private String cpf;
