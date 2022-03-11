@@ -6,20 +6,22 @@ public class TesteSerializacaoCliente {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
+      /*
         Cliente cliente = new Cliente();
         cliente.setNome("adriano gasques");
         cliente.setProfissao("est");
         cliente.setCpf("1234456657");
 
 
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("objeto.bin"));
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("cliente.bin"));
         oos.writeObject(cliente);
         oos.close();
+*/
 
-       // ObjectInputStream ois = new ObjectInputStream(new FileInputStream("objeto.bin"));
-       // String nome = (String) ois.readObject();
-       // ois.close();
-       // System.out.println(nome);
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("cliente.bin"));
+        Cliente cliente = (Cliente) ois.readObject();
+        ois.close();
+        System.out.println(cliente.getNome() +" "+ cliente.getCpf());
 
     }
 }
