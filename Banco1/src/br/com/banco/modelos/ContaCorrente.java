@@ -2,7 +2,7 @@ package br.com.banco.modelos;
 
 
 //new ContaCorrente()
-public class ContaCorrente extends Conta implements Tributavel {
+public class ContaCorrente extends Conta implements Tributavel  {
 
 	public ContaCorrente(int agencia, int numero) {
 		super(agencia, numero);
